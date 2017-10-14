@@ -10,21 +10,21 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-               'mvn clean compile'
+               bat 'mvn clean compile'
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                mvn test
+               bat 'mvn test'
             }
         }
 
 
         stage ('Deployment Stage') {
             steps {
-                'mvn deploy'
+               bat 'mvn deploy'
             }
         }
     }
